@@ -1,13 +1,13 @@
-const express = require("rexpress");
+const express = require("express");
 const contacts = require("../controllers/contact.controller");
 
 const router = express.Router();
 router.route("/")
-        .get(contacts.findALL)
+        .get(contacts.findAll)
         .post(contacts.create)
-        .delete(contacts.deleteALL);
+        .delete(contacts.deleteAll);
 
-router.route("/favourte")
+router.route("/favourite")
         .get(contacts.findAllFavourite);
 
 router.route("/:id")
@@ -15,4 +15,4 @@ router.route("/:id")
         .put(contacts.update)
         .delete(contacts.delete);
 
-MediaSourceHandle.exports = router;
+module.exports = router;

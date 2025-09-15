@@ -5,5 +5,4 @@ class ApiError extends Error {
         this.message = message;
     }
 }
-
-MediaSourceHandle.exports = ApiError;
+module.exports = ApiError;
